@@ -34,6 +34,7 @@ texture = ExtResource("2_jhjs2")
 stretch_mode = 5
 
 [node name="Tip" type="TextureRect" parent="Base"]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -47,5 +48,6 @@ offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(50, 50)
+tooltip_text = "left joystick to move"
 texture = ExtResource("3_3etdg")
 stretch_mode = 5

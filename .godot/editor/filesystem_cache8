@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1692287197
+::res://::1692415293
 control.tscn::PackedScene::7696534585277082216::1692030879::0::1::::<><>::res://start.gd<>res://exit.gd
 default_env.tres::Environment::-1::1691467523::0::1::::<><>::
 exit.gd::GDScript::-1::1692287150::0::1::::<>Button<>::

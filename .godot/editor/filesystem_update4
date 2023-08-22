@@ -1,7 +1,13 @@
-res://exit.gd
-res://flagmesh.gd
+res://main.tscn
 res://CustomInputEvents/InputEventMultiScreenDrag.gd
-res://Jump.gd
-res://menu.gd
-res://test/player.gd
+res://control.tscn
+res://joystick/virtual_joystick.tscn
 res://player.gd
+res://Jump.gd
+res://stairs.gd
+res://game_over.tscn
+res://play Again.gd
+res://exit.gd
+res://quit Game.gd
+res://Sprint.gd
+res://stimpad.gd
