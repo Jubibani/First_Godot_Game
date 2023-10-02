@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b578d6rnfrtmn"
+uid="uid://bubewvfx5ao4n"
 path.s3tc="res://.godot/imported/rust-metal-with-rough-appearance.jpg-4e11203ef45c9697ad7c9f2e47665fc8.s3tc.ctex"
+path.etc2="res://.godot/imported/rust-metal-with-rough-appearance.jpg-4e11203ef45c9697ad7c9f2e47665fc8.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://textures/rust-metal-with-rough-appearance.jpg"
-dest_files=["res://.godot/imported/rust-metal-with-rough-appearance.jpg-4e11203ef45c9697ad7c9f2e47665fc8.s3tc.ctex"]
+dest_files=["res://.godot/imported/rust-metal-with-rough-appearance.jpg-4e11203ef45c9697ad7c9f2e47665fc8.s3tc.ctex", "res://.godot/imported/rust-metal-with-rough-appearance.jpg-4e11203ef45c9697ad7c9f2e47665fc8.etc2.ctex"]
 
 [params]
 

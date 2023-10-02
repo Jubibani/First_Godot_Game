@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://c70xsaveyooxc"]
+
+[ext_resource type="FontFile" uid="uid://dwp7hqvt6nng1" path="res://fonts/Stacked pixel.ttf" id="1_17vhd"]
+[ext_resource type="Script" path="res://gdscripts/Button.gd" id="2_0im1m"]
+
+[node name="multiplayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 650.0
+color = Color(0.768627, 0.52549, 0.27451, 1)
+
+[node name="coming_soon" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 245.0
+offset_right = 937.0
+offset_bottom = 372.0
+theme_override_fonts/font = ExtResource("1_17vhd")
+theme_override_font_sizes/font_size = 125
+text = "coming_soon!
+"
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 66.0
+offset_right = 160.0
+offset_bottom = 108.0
+theme_override_fonts/font = ExtResource("1_17vhd")
+theme_override_font_sizes/font_size = 35
+text = "< - back -"
+script = ExtResource("2_0im1m")
+
+[node name="dev" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 363.0
+offset_right = 785.0
+offset_bottom = 396.0
+theme_override_fonts/font = ExtResource("1_17vhd")
+theme_override_font_sizes/font_size = 35
+text = "Dev is trying his best :>"
+
+[connection signal="pressed" from="ColorRect/Button" to="ColorRect/Button" method="_on_pressed"]

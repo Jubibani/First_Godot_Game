@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bc6gwklfsx8rh"
 path.s3tc="res://.godot/imported/Ground022_2K_Normal.jpg-678899bfd49bbd3f0d5a26a5a0c67e6e.s3tc.ctex"
+path.etc2="res://.godot/imported/Ground022_2K_Normal.jpg-678899bfd49bbd3f0d5a26a5a0c67e6e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://TerrainPlugin/TestTextures/Sandy/Ground022_2K_Normal.jpg"
-dest_files=["res://.godot/imported/Ground022_2K_Normal.jpg-678899bfd49bbd3f0d5a26a5a0c67e6e.s3tc.ctex"]
+dest_files=["res://.godot/imported/Ground022_2K_Normal.jpg-678899bfd49bbd3f0d5a26a5a0c67e6e.s3tc.ctex", "res://.godot/imported/Ground022_2K_Normal.jpg-678899bfd49bbd3f0d5a26a5a0c67e6e.etc2.ctex"]
 
 [params]
 

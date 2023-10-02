@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmxwi81tkqvo"
 path.s3tc="res://.godot/imported/Ground022_2K_AmbientOcclusion.jpg-fbee09b967a294c2b2301ebc12678182.s3tc.ctex"
+path.etc2="res://.godot/imported/Ground022_2K_AmbientOcclusion.jpg-fbee09b967a294c2b2301ebc12678182.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://TerrainPlugin/TestTextures/Sandy/Ground022_2K_AmbientOcclusion.jpg"
-dest_files=["res://.godot/imported/Ground022_2K_AmbientOcclusion.jpg-fbee09b967a294c2b2301ebc12678182.s3tc.ctex"]
+dest_files=["res://.godot/imported/Ground022_2K_AmbientOcclusion.jpg-fbee09b967a294c2b2301ebc12678182.s3tc.ctex", "res://.godot/imported/Ground022_2K_AmbientOcclusion.jpg-fbee09b967a294c2b2301ebc12678182.etc2.ctex"]
 
 [params]
 

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgruf45vrbjb6"]
+
+[ext_resource type="Material" uid="uid://b5xxk6subsqt1" path="res://textures/new_standard_material_3d.tres" id="1_uvc7j"]
+
+[node name="Map" type="Node3D"]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="Ground" type="CSGBox3D" parent="CSGCombiner3D"]
+size = Vector3(15.8136, 0.440328, 10.4616)
+material = ExtResource("1_uvc7j")
+
+[node name="wall" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0124, 0)
+size = Vector3(14.4138, 3.66588, 0.348498)
+material = ExtResource("1_uvc7j")

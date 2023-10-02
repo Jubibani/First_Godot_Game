@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://clc4kcx4335tx"
 path.s3tc="res://.godot/imported/PavingStones046_2K_Normal.jpg-3bd8b4f6bc99900098b18285d7bbcb05.s3tc.ctex"
+path.etc2="res://.godot/imported/PavingStones046_2K_Normal.jpg-3bd8b4f6bc99900098b18285d7bbcb05.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://TerrainPlugin/TestTextures/Pave/PavingStones046_2K_Normal.jpg"
-dest_files=["res://.godot/imported/PavingStones046_2K_Normal.jpg-3bd8b4f6bc99900098b18285d7bbcb05.s3tc.ctex"]
+dest_files=["res://.godot/imported/PavingStones046_2K_Normal.jpg-3bd8b4f6bc99900098b18285d7bbcb05.s3tc.ctex", "res://.godot/imported/PavingStones046_2K_Normal.jpg-3bd8b4f6bc99900098b18285d7bbcb05.etc2.ctex"]
 
 [params]
 

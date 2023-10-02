@@ -1,13 +1,12 @@
-res://main.tscn
+res://scenes/pause.tscn
 res://CustomInputEvents/InputEventMultiScreenDrag.gd
-res://control.tscn
-res://joystick/virtual_joystick.tscn
-res://player.gd
-res://Jump.gd
-res://stairs.gd
-res://game_over.tscn
-res://play Again.gd
-res://exit.gd
-res://quit Game.gd
-res://Sprint.gd
-res://stimpad.gd
+res://gdscripts/menu.gd
+res://gdscripts/multiplayer.gd
+res://textures/new_standard_material_3d.tres
+res://maps/Playground.tscn
+res://scenes/control.tscn
+res://scenes/enemy.tscn
+res://scenes/player.tscn
+res://test/test.tscn
+res://scenes/menu.tscn
+res://maps/blockground.tscn

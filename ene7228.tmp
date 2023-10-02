@@ -1,0 +1,102 @@
+[gd_scene load_steps=7 format=3 uid="uid://i783yl03os0a"]
+
+[ext_resource type="Script" path="res://Body_Part_Area3d.gd" id="1_v1jpd"]
+
+[sub_resource type="GDScript" id="GDScript_pqoit"]
+resource_local_to_scene = true
+script/source = "extends CharacterBody3D
+
+var speed = 5
+var accel = 10
+var jumpForce = 8
+var jumpProbability = 0.01  # Adjust this probability as needed
+var health = 6
+
+@onready var nav: NavigationAgent3D = $NavigationAgent3D
+var player: Node
+
+func _ready():
+	# Assuming you have a root node in the scene named \"Player\"
+	player = get_node(\"../../../player\")
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+func _input(event):
+	if event.is_action_pressed(\"ui_cancel\"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		
+func _process(delta):
+	if health <= 0:
+		queue_free()
+
+	
+func _physics_process(delta):
+	if player:
+		var direction = Vector3()
+
+		nav.target_position = player.global_transform.origin
+
+		direction = nav.get_next_path_position() - global_position
+		direction = direction.normalized()
+
+		velocity = velocity.lerp(direction * speed, accel * delta)
+
+		# Randomly make the enemy jump based on jumpProbability
+		if randf() < jumpProbability and is_on_floor():
+			velocity.y = jumpForce
+
+		move_and_slide()
+
+
+	# Randomly change the enemy's speed
+	if randf() < 0.01:  # Adjust the probability as needed
+		speed = speed * (1.0 + randf_range(-0.5, 0.5))  # Randomly adjust speed
+
+		# Limit the speed to a reasonable range
+		speed = clamp(speed, 3, 10)
+func hit():
+	# Reduce health or implement other behavior here
+	health -= 1
+	if health <= 0:
+		queue_free()
+
+func _on_navigation_agent_3d_target_reached():
+	get_tree().change_scene_to_file(\"res://game_over.tscn\")
+
+func _on_area_3d_body_part_hit(dam):
+    health -= dam
+    if health <= 0:
+        queue_free()
+    else:
+        hit()"
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wh0oq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ls3hg"]
+albedo_color = Color(0.54902, 0.0705882, 0.0470588, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_pc7q5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_knrvu"]
+
+[node name="enemy" type="CharacterBody3D" groups=["Enemy"]]
+script = SubResource("GDScript_pqoit")
+
+[node name="bodyCollisionShape" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_wh0oq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="bodyCollisionShape"]
+material_override = SubResource("StandardMaterial3D_ls3hg")
+mesh = SubResource("CapsuleMesh_pc7q5")
+
+[node name="Area3D" type="Area3D" parent="." groups=["Enemy"]]
+script = ExtResource("1_v1jpd")
+damage = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CapsuleShape3D_knrvu")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." groups=["Enemy"]]
+target_desired_distance = 2.0
+
+[connection signal="body_part_hit" from="Area3D" to="." method="_on_area_3d_body_part_hit"]
+[connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]

@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4o45cl2npfar"]
+
+[ext_resource type="Script" path="res://gdscripts/game_over.gd" id="1_cff54"]
+[ext_resource type="FontFile" uid="uid://dwp7hqvt6nng1" path="res://fonts/Stacked pixel.ttf" id="2_1tuv3"]
+[ext_resource type="Script" path="res://gdscripts/play Again.gd" id="3_l26vp"]
+[ext_resource type="Script" path="res://gdscripts/quit Game.gd" id="4_4m1d4"]
+
+[node name="gameover" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cff54")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 644.0
+color = Color(0.654902, 0.0392157, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 157.0
+offset_right = 874.0
+offset_bottom = 281.0
+theme_override_fonts/font = ExtResource("2_1tuv3")
+theme_override_font_sizes/font_size = 125
+text = "Game Over!"
+
+[node name="play Again" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 467.0
+offset_top = 311.0
+offset_right = 687.0
+offset_bottom = 381.0
+theme_override_fonts/font = ExtResource("2_1tuv3")
+theme_override_font_sizes/font_size = 35
+text = "- Play Again -"
+script = ExtResource("3_l26vp")
+
+[node name="Back" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 418.0
+offset_right = 685.0
+offset_bottom = 485.0
+theme_override_fonts/font = ExtResource("2_1tuv3")
+theme_override_font_sizes/font_size = 35
+text = "- Back -"
+script = ExtResource("4_4m1d4")
+
+[connection signal="pressed" from="ColorRect/play Again" to="ColorRect/play Again" method="_on_pressed"]
+[connection signal="pressed" from="ColorRect/Back" to="ColorRect/Back" method="_on_pressed"]
