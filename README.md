@@ -1,43 +1,15 @@
-# Godot Virtual Joystick
+# `Nice Try!`
 
-<img src="previews/icon.png" width="200">
+This is supposedly to be my very first FPS game. An apex Legends inspired Online Multiplayer based Game. --but, This is too big of a scope for a newbie like me who is still learning the game engine. I will get back to this soon . 
 
-A simple virtual joystick for touchscreens, with useful options.
+<aside>
+💡 you can download it and modify it all you want.
 
-GitHub Page: https://github.com/MarcoFazioRandom/Virtual-Joystick-Godot
+</aside>
 
-Godot Engine: https://godotengine.org
+# `Motivations`
 
-### PREVIEWS:
+- To publish it on play store
+- To learn and explore
 
-<img src="previews/preview1.png" width="400">
-
-Easy to setup:  
-<img src="previews/preview2.png" width="200">
-
-Easy to use:  
-<img src="previews/preview3.png" width="500">
-
-### OPTIONS:  
-
-- Joystick mode: 
-	- Fixed: The joystick doesn't move. 
-	- Dynamic: Every time the joystick area is pressed, the joystick position is set on the touched position. 
-
-- Dead zone size: If the tip is inside this range the output is zero.
-
-- Clamp zone size: The max distance the tip can reach.
-
-- Visibility mode: 
-	- Always: Always visible.
-	- touchscreen only: Visible on touch screens only (will hide if the device has not a touchscreen).
-
-- Use input actions: if true the joystick will trigger the input actions created in Project -> Project Settings -> Input Map
-
-### HELP:  
-- The Control parent of the joystick is the area in which the joystick can move in Dynamic mode.  
-- For moving the joystick inside his area, select it, right click, turn on "Editable Children" and then change the position of the Base node.  
-- With "Editable Children" turned on you can also edit the joystick textures and colors.  
-- **To be able able to use multitouch and mouse, I advise you got to Project -> Project Settings -> General -> Input Devicesto and turn ON "emulate touch from mouse" and turn OFF "emulate mouse from touch".**
-- Create a CanvasLayer node and name it "UI", it'll contain all the UI elements, then add the Joystick scene as a child of the UI node and move it where you prefer.  
-- An example scene is provided in the "Test" folder.  
+`I love playing video Games` ever since when I was still a sperm cell. I still love playing video games. However it is only when I was a 1st year college that got me curious on how are video games are made.  so I decided to make one!
